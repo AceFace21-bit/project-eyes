@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080C15"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="irisGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="crosshairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="240" rx="24" fill="url(#bgGrad)"/>
+  <rect width="796" height="236" x="2" y="2" rx="22" fill="none" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- ================= LOGO ICON EMBLEM ================= -->
+  <g transform="translate(130, 120)">
+    <!-- Outer Telemetry Ring / Reticle -->
+    <circle cx="0" cy="0" r="76" fill="none" stroke="#1E293B" stroke-width="2"/>
+    <circle cx="0" cy="0" r="68" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 6"/>
+    
+    <!-- Outer Glow Ring -->
+    <circle cx="0" cy="0" r="58" fill="none" stroke="url(#irisGrad)" stroke-width="3" filter="url(#glow)" opacity="0.6"/>
+    <circle cx="0" cy="0" r="58" fill="none" stroke="url(#irisGrad)" stroke-width="3"/>
+
+    <!-- Precision Telemetry Corner Brackets -->
+    <path d="M -48 -24 L -48 -48 L -24 -48" fill="none" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 48 -24 L 48 -48 L 24 -48" fill="none" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+    <path d="M -48 24 L -48 48 L -24 48" fill="none" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 48 24 L 48 48 L 24 48" fill="none" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Stylized Eye Aperture Blades -->
+    <!-- Top Arc -->
+    <path d="M -42 0 Q 0 -42 42 0 Q 0 42 -42 0 Z" fill="#0E1726" stroke="#38BDF8" stroke-width="2.5" opacity="0.9"/>
+    
+    <!-- Glowing Iris Core -->
+    <circle cx="0" cy="0" r="24" fill="url(#irisGrad)"/>
+    <circle cx="0" cy="0" r="16" fill="#080C15"/>
+
+    <!-- Medical Rx / Telemetry Core Crosshairs -->
+    <!-- Pupil Center Laser Dot -->
+    <circle cx="0" cy="0" r="6" fill="#34D399" filter="url(#glow)"/>
+    <circle cx="0" cy="0" r="4" fill="#FFFFFF"/>
+
+    <!-- Micro Precision Crosshairs -->
+    <line x1="-12" y1="0" x2="-6" y2="0" stroke="#34D399" stroke-width="2" stroke-linecap="round"/>
+    <line x1="6" y1="0" x2="12" y2="0" stroke="#34D399" stroke-width="2" stroke-linecap="round"/>
+    <line x1="0" y1="-12" x2="0" y2="-6" stroke="#34D399" stroke-width="2" stroke-linecap="round"/>
+    <line x1="0" y1="6" x2="0" y2="12" stroke="#34D399" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Micro Satellite Telemetry Node -->
+    <circle cx="34" cy="-28" r="4" fill="#34D399"/>
+    <circle cx="34" cy="-28" r="8" fill="none" stroke="#34D399" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <!-- ================= TYPOGRAPHY ================= -->
+  <!-- "Eye" in crisp white -->
+  <text x="245" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, sans-serif" font-size="64" font-weight="900" fill="#FFFFFF" letter-spacing="-1">Eye<tspan fill="#38BDF8">Rx</tspan><tspan fill="#34D399">Now</tspan></text>
+
+  <!-- Domain Tag / Medical Tech Badge -->
+  <text x="635" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, sans-serif" font-size="18" font-weight="800" fill="#38BDF8" letter-spacing="1">.COM</text>
+
+  <!-- Subtitle Tagline -->
+  <text x="248" y="166" font-family="-apple-system, BlinkMacSystemFont, 'JetBrains Mono', monospace, sans-serif" font-size="13" font-weight="700" fill="#94A3B8" letter-spacing="2">CLINICAL OPTICAL TELEMETRY PLATFORM</text>
+
+  <!-- Bottom Accent Feature Bar -->
+  <g transform="translate(248, 184)">
+    <rect width="10" height="10" rx="3" fill="#2563EB"/>
+    <text x="16" y="9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" fill="#CBD5E1">PATENT PENDING 64/174,835</text>
+
+    <circle cx="212" cy="5" r="2.5" fill="#475569"/>
+    <text x="224" y="9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" fill="#34D399">ZERO-HARDWARE AI</text>
+
+    <circle cx="356" cy="5" r="2.5" fill="#475569"/>
+    <text x="368" y="9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" fill="#38BDF8">INSTANT PD &amp; RX</text>
+  </g>
+</svg>
